@@ -1916,6 +1916,29 @@ Dec 21 02:34:54 rkcrpidt1 mtp-probe: checking bus 1, device 9: "/sys/devices/pla
 Dec 21 02:34:54 rkcrpidt1 mtp-probe: bus: 1, device: 9 was not an MTP device
 
 
+
+<<<journalctl --follow>>>
+
+shamoke_rpi@rkcrpidt1:~$ journalctl --follow
+
+<<unplug>>
+Dec 22 00:52:55 rkcrpidt1 kernel: usb 1-1.3: USB disconnect, device number 12
+
+<<plug>>
+Dec 22 00:52:58 rkcrpidt1 kernel: usb 1-1.3: new full-speed USB device number 13 using xhci_hcd
+Dec 22 00:52:58 rkcrpidt1 kernel: usb 1-1.3: New USB device found, idVendor=2a03, idProduct=0043, bcdDevice= 0.01
+Dec 22 00:52:58 rkcrpidt1 kernel: usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+Dec 22 00:52:58 rkcrpidt1 kernel: usb 1-1.3: Product: Arduino Uno
+Dec 22 00:52:58 rkcrpidt1 kernel: usb 1-1.3: Manufacturer: Arduino Srl            
+Dec 22 00:52:58 rkcrpidt1 kernel: usb 1-1.3: SerialNumber: 75431343334351F092A0
+Dec 22 00:52:58 rkcrpidt1 mtp-probe[16759]: checking bus 1, device 13: "/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3"
+Dec 22 00:52:58 rkcrpidt1 mtp-probe[16759]: bus: 1, device: 13 was not an MTP device
+Dec 22 00:52:58 rkcrpidt1 mtp-probe[16764]: checking bus 1, device 13: "/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3"
+Dec 22 00:52:58 rkcrpidt1 mtp-probe[16764]: bus: 1, device: 13 was not an MTP device
+
+
+
+
 <<<unplug followed by plug in of arduino uno r3>>>
 shamoke_rpi@rkcrpidt1:~$ udevadm monitor
 monitor will print the received events for:
